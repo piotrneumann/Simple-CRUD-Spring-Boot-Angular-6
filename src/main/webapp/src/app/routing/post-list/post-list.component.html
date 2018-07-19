@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let post of postList">
+    <ul>
+      <li>{{post.id}}</li>
+      <li>{{post.title}}</li>
+      <li>{{post.description}}</li>
+      <div>
+        <a routerLink="/post-edit/{{post.id}}">edit</a>
+      </div>
+    </ul>
+  </li>
+  <button routerLink="/post-add/">Add</button>
+</ul>
