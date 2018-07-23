@@ -20,7 +20,7 @@ public class PostService {
 
     public PostDto getPostDto(long id) throws RuntimeException {
         Optional<Post> post = postRepository.findById(id);
-        if(post.isPresent()) {
+        if (post.isPresent()) {
             return new PostDto(post.get());
         } else {
             throw new RuntimeException("Post id: " + id + " not found");
@@ -56,7 +56,7 @@ public class PostService {
 
     public void deletePost(long id) {
         Optional<Post> post = postRepository.findById(id);
-        if(post.isPresent()) {
+        if (post.isPresent()) {
             postRepository.delete(post.get());
         } else {
             throw new RuntimeException("Post id: " + id + " not found");
